@@ -1,0 +1,40 @@
+
+\documentclass[12pt, a4paper]{report}
+
+\input{preambles}
+
+%%% Bibliography %%%
+\addbibresource{bibliography.bib}
+
+% line number for debug (comment out when you submit)
+%\linenumbers
+
+\include{AuthorInfo}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\include{src/00_Abstract}
+\tableofcontents
+\include{src/01_Chapter1}
+\include{src/02_Chapter2}
+\include{src/03_Chapter3}
+\include{src/04_Chapter4}
+\include{src/05_Summary}
+\include{src/06_Acknowledgment}
+\begin{appendices}
+\include{src/07_Appendix_A}
+\end{appendices}
+
+\listoffigures
+\listoftables
+
+\label{page:bib}
+\printbibliography
+
+\end{document}
+
+
+
