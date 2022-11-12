@@ -3,38 +3,46 @@
 
 \input{preambles}
 
-%%% Bibliography %%%
-\addbibresource{bibliography.bib}
-
 % line number for debug (comment out when you submit)
 %\linenumbers
 
-\include{AuthorInfo}
 
 \begin{document}
+
+\include{AuthorInfo}
 
 \maketitle
 \thispagestyle{empty}
 
-\include{src/00_Abstract}
+\include{src/Abstract}
 \tableofcontents
-\include{src/01_Chapter1}
-\include{src/02_Chapter2}
-\include{src/03_Chapter3}
-\include{src/04_Chapter4}
-\include{src/05_Summary}
-\include{src/06_Acknowledgment}
+
+\label{chap_01}
+\include{src/Chapter1}
+
+\clearpage
+\label{chap_02}
+\include{src/Chapter2}
+
+\clearpage
+\label{chap_summary}
+\include{src/Summary}
+
+\include{src/Acknowledgment}
+
+
 \begin{appendices}
-\include{src/07_Appendix_A}
+\label{chap_Appendix_A}
+\include{src/Appendix_A}
 \end{appendices}
 
 \listoffigures
 \listoftables
 
-\label{page:bib}
-\printbibliography
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
 
 \end{document}
-
-
 

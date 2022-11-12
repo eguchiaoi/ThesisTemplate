@@ -5,28 +5,61 @@
 
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{multicol}
-\usepackage{amsmath}
 \usepackage{bm}
 \usepackage{fancyhdr}
-\usepackage{amssymb}
 \usepackage{braket}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{graphicx}
 \usepackage{here}
-\usepackage{okumacro}
-\usepackage[dvipdfmx]{hyperref}
-\usepackage{pxjahyper}
+%\usepackage{okumacro}
+%\usepackage{pxjahyper}
 \usepackage{color}
 \usepackage{ascmac}
-\usepackage{url}
 \usepackage{cancel}
 \usepackage{CJKutf8}
+\usepackage[
+  top=2cm,
+  bottom=2cm,
+  headheight=15pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
+\usepackage[svgnames,table]{xcolor}
+\usepackage{anysize}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{braket}
+\usepackage{authblk}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
 \usepackage{lineno}
-\usepackage[hang,small,bf]{caption}
-\usepackage[]{subcaption}
-\usepackage[]{appendix}
-\usepackage[sorting=none]{biblatex}
+\usepackage[section]{placeins}
+\usepackage{changepage}
+\usepackage{xspace}
+\usepackage[labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage[title]{appendix}
 
+\usepackage[
+colorlinks=true,
+linkcolor=DarkBlue,
+citecolor=DarkBlue,
+anchorcolor=DarkBlue,
+urlcolor=DarkBlue,
+pagebackref=true
+]{hyperref}
+\usepackage[capitalize]{cleveref}
 
-
+\renewcommand*{\backreflastsep}{, }
+\renewcommand*{\backreftwosep}{, }
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{%
+  \ifcase #1 %
+    \relax % use \relax if you do not want the "No citations" message
+  \or
+    (page~#2).%
+  \else
+    (pages~#2).%
+  \fi%
+}
